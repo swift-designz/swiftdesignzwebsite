@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import { Resend } from "resend";
 import {
   escapeHtml,
@@ -217,26 +217,43 @@ export async function POST(req: NextRequest) {
       throw new Error(notifyError.message ?? "Failed to send notification email");
     }
 
-    // Fire-and-forget lead capture to admin portal
-    fetch("https://admin.swiftdesignz.co.za/api/leads", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        source:       "quote_form",
-        name,
-        email,
-        phone:        phone    || null,
-        company:      company  || null,
-        location:     location || null,
-        service:      serviceLabel || null,
-        package:      pkg      || null,
-        scope:        scope    || null,
-        timeline:     timeline || null,
-        budget:       budget   || null,
-        message:      notes    || null,
-        brand_colors: brandColorsArr.length > 0 ? brandColorsArr : null,
-      }),
-    }).catch(() => {});
+    // Lead capture, deferred with after() rather than left as a floating promise.
+    //
+    // This was `fetch(...).catch(() => {})`. On Vercel the function returns its response
+    // and the runtime suspends, often before an unawaited fetch has finished, so the lead
+    // was delivered or dropped depending on timing. The integration shipped on 17 June
+    // 2026 and produced no leads at all in the three and a half months that followed:
+    // people filled the form in, got a confirmation email saying it had been received,
+    // and it never arrived.
+    //
+    // after() keeps the invocation alive until the work completes, and a failure is now
+    // logged instead of swallowed.
+    after(async () => {
+      try {
+        const res = await fetch("https://admin.swiftdesignz.co.za/api/leads", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            source:       "quote_form",
+            name,
+            email,
+            phone:        phone    || null,
+            company:      company  || null,
+            location:     location || null,
+            service:      serviceLabel || null,
+            package:      pkg      || null,
+            scope:        scope    || null,
+            timeline:     timeline || null,
+            budget:       budget   || null,
+            message:      notes    || null,
+            brand_colors: brandColorsArr.length > 0 ? brandColorsArr : null,
+          }),
+        });
+        if (!res.ok) console.error("quote_form lead capture rejected:", res.status, await res.text());
+      } catch (err) {
+        console.error("quote_form lead capture failed:", err);
+      }
+    });
 
     // Confirmation to client
     const pkgLabel = getPackageLabel(service, pkg);

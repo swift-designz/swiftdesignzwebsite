@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import { Resend } from "resend";
 import { checkRateLimit } from "@/lib/rateLimit";
 
@@ -95,20 +95,37 @@ export async function POST(req: NextRequest) {
       throw new Error(notifyError.message ?? "Failed to send notification email");
     }
 
-    // Fire-and-forget lead capture to admin portal
-    fetch("https://admin.swiftdesignz.co.za/api/leads", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        source:  "contact_form",
-        name,
-        email,
-        phone:   phone   || null,
-        service: service || null,
-        budget:  budget  || null,
-        message: message || null,
-      }),
-    }).catch(() => {});
+    // Lead capture, deferred with after() rather than left as a floating promise.
+    //
+    // This was `fetch(...).catch(() => {})`. On Vercel the function returns its response
+    // and the runtime suspends, often before an unawaited fetch has finished, so the lead
+    // was delivered or dropped depending on timing. The integration shipped on 17 June
+    // 2026 and produced no leads at all in the three and a half months that followed:
+    // people filled the form in, got a confirmation email saying it had been received,
+    // and it never arrived.
+    //
+    // after() keeps the invocation alive until the work completes, and a failure is now
+    // logged instead of swallowed.
+    after(async () => {
+      try {
+        const res = await fetch("https://admin.swiftdesignz.co.za/api/leads", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            source:  "contact_form",
+            name,
+            email,
+            phone:   phone   || null,
+            service: service || null,
+            budget:  budget  || null,
+            message: message || null,
+          }),
+        });
+        if (!res.ok) console.error("contact_form lead capture rejected:", res.status, await res.text());
+      } catch (err) {
+        console.error("contact_form lead capture failed:", err);
+      }
+    });
 
     // Send confirmation to the client
     const { error: confirmError } = await resend.emails.send({

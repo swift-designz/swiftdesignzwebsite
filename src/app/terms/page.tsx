@@ -27,7 +27,7 @@ export default function TermsPage() {
               <p>
                 By accessing and using the Swift Designz website (swiftdesignz.co.za) and engaging
                 our services, you agree to be bound by these Terms and Conditions. These terms apply
-                to Swift Designz Investments CC (Registration No. CC/2026/055589), trading as Swift Designz.
+                to Swift Designz Investments CC (Registration No. CC/2026/05589), trading as Swift Designz.
                 If you do not agree, please do not use our website or services.
               </p>
             </div>
@@ -104,7 +104,7 @@ export default function TermsPage() {
               <p>
                 These Terms and Conditions are governed by the laws of the Republic of Namibia.
                 Swift Designz Investments CC is a registered Namibian Close Corporation
-                (Registration No. CC/2026/055589). Any disputes shall be resolved in the competent
+                (Registration No. CC/2026/05589). Any disputes shall be resolved in the competent
                 courts of Namibia.
               </p>
             </div>

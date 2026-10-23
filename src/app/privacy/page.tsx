@@ -26,7 +26,7 @@ export default function PrivacyPage() {
             <div>
               <h2 className="text-lg font-semibold text-white mb-3">1. Introduction</h2>
               <p>
-                Swift Designz Investments CC (Registration No. CC/2026/055589), trading as Swift Designz
+                Swift Designz Investments CC (Registration No. CC/2026/05589), trading as Swift Designz
                 (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), respects your privacy and is committed to protecting your
                 personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard
                 your information when you visit our website swiftdesignz.co.za.

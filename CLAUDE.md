@@ -11,7 +11,7 @@
 
 ## Legal & Registration
 - **Registered Name:** SWIFT DESIGNZ INVESTMENTS CC
-- **Registration Number:** CC/2026/055589
+- **Registration Number:** CC/2026/05589
 - **Business Type:** Close Corporation (CC) - Namibia
 - **Principal Business:** Software Development and Consultancy
 - **Taxpayer ID (NamRA):** 16271273
@@ -151,7 +151,7 @@
   - Consolidated all marketing images + videos into public/marketing/
   - Removed 38 one-off scripts; scripts/ now contains only 2 active tools
 - Phase 8: Business registration + infrastructure migration ✅
-  - Official registration: SWIFT DESIGNZ INVESTMENTS CC (CC/2026/055589, TIN 16271273)
+  - Official registration: SWIFT DESIGNZ INVESTMENTS CC (CC/2026/05589, TIN 16271273). The NamRA tax certificate prints cc/2026/055589 (NamRA typo); the BIPA founding statement (CK1) is authoritative: CC/2026/05589.
   - Legal pages updated with registered name, reg number, governing law corrected to Namibia
   - "Freelance" references replaced with "registered company" in copy and SEO metadata
   - GitHub repo transferred from KeenanHusselmann to keenanswift101

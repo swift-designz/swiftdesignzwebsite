@@ -37,7 +37,7 @@ node scripts/export-fb-carousel.mjs
 
 ## Business Info
 
-- **Registered:** SWIFT DESIGNZ INVESTMENTS CC (CC/2026/055589)
+- **Registered:** SWIFT DESIGNZ INVESTMENTS CC (CC/2026/05589)
 - **Owner:** Keenan Husselmann
 - **Contact:** info@swiftdesignz.co.za
 - **Phone (NAM):** +264 81 388 1111

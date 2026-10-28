@@ -14,19 +14,13 @@ const sites = [
     waitFor: 4000,
   },
   {
-    name: "essential420",
-    url: "https://essential420-website.vercel.app",
-    waitFor: 5000,
-    ageGate: true, // click "Yes, I'm over 21" button
-  },
-  {
     name: "iaacademy",
     url: "https://ia-academy.org",
     waitFor: 4000,
   },
   {
     name: "it-guru",
-    url: "https://it-guru.online",
+    url: "https://it-guru.co.za",
     waitFor: 4000,
   },
   {

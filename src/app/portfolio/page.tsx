@@ -90,14 +90,6 @@ const projects: Project[] = [
     link: "https://fryse.com.na",
     tags: ["Fashion", "E-Commerce", "Filter System"],
   },
-  {
-    title: "Essential 420 - Cannabis Dispensary",
-    category: "ecommerce",
-    description:
-      "A luxury cannabis dispensary platform for a Cape Town brand offering premium flowers, edibles, vapes, and CBD wellness products with a sleek, immersive shopping experience.",
-    image: "/potfolio/essential420-portfolio-thumbnail.png",
-    tags: ["E-Commerce", "Product Catalogue", "Custom Design"],
-  },
   // --- Apps ---
   {
     title: "BasketBuddy - Budgeting App",

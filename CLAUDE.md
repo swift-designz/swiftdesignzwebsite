@@ -58,22 +58,21 @@
 - [x] Terms & Conditions
 - [x] Cookie Policy
 
-## Portfolio Projects (10 total)
+## Portfolio Projects (9 total)
 ### Websites
 - TB Free Foundation Website (custom design, responsive, SEO)
 - DUNMORE Training & Skills Development → https://dunmore.co.za
 - IA Academy - Neurodivergent School → https://ia-academy.org
-- IT-Guru Online → https://it-guru.online
+- IT-Guru → https://it-guru.co.za
 - Rehoboth Community Trust → https://rehotrust.org
 
 ### E-Commerce
 - Ruby's Faith Jewellery Store (custom design, product catalogue)
 - Fryse - Freeze Dried Products (fashion, filter system)
-- Essential 420 - Cannabis Dispensary → https://essential420-website.vercel.app
 
 ### Apps
 - BasketBuddy - Budgeting App (mobile, native, cloud)
-- HireMeBuddy - Job Search App (mobile, SaaS)
+- HireMeBuddy™ - Local Services App (our own product) → https://hiremebuddy.swiftdesignz.co.za
 
 ## Special Features
 - Drag-to-unlock splash screen (first visit / once per session)

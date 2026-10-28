@@ -90,13 +90,9 @@ export default function Footer() {
                 <MapPin size={14} />
                 {t("footer.location")}
               </div>
-              <a href="tel:+264813881111" className="flex items-center gap-2 text-sm text-gray-300 hover:text-[var(--swift-teal)] transition-colors">
+              <a href="tel:+264818536789" className="flex items-center gap-2 text-sm text-gray-300 hover:text-[var(--swift-teal)] transition-colors">
                 <Phone size={14} />
-                NAM: +264 81 388 1111
-              </a>
-              <a href="tel:+27762557783" className="flex items-center gap-2 text-sm text-gray-300 hover:text-[var(--swift-teal)] transition-colors">
-                <Phone size={14} />
-                SA: +27 76 255 7783
+                NAM: +264 81 853 6789
               </a>
               <div className="flex items-center gap-3 pt-1">
                 <a

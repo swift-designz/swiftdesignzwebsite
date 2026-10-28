@@ -6,7 +6,7 @@
 - **Owner:** Keenan Husselmann
 - **Domain:** swiftdesignz.co.za (hosted by IT-Guru, South Africa)
 - **Emails:** info@swiftdesignz.co.za, keenan@swiftdesignz.co.za
-- **Phone:** NAM +264 81 388 1111 | SA +27 76 255 7783
+- **Phone:** NAM +264 81 853 6789 (old MTC +264 81 388 1111 and SA +27 76 255 7783 retired 2026-10-28)
 - **Deployment:** Vercel (auto-deploy from GitHub: keenanswift101/swiftdesignzwebsite)
 
 ## Legal & Registration

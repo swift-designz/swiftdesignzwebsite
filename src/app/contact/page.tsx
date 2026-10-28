@@ -155,11 +155,8 @@ function ContactForm() {
                   title: "Call Us",
                   content: (
                     <>
-                      <a href="tel:+264813881111" className="text-sm text-gray-400 hover:text-[var(--swift-teal)] transition-colors block">
-                        NAM: +264 81 388 1111
-                      </a>
-                      <a href="tel:+27762557783" className="text-sm text-gray-400 hover:text-[var(--swift-teal)] transition-colors block mt-1">
-                        SA: +27 76 255 7783
+                      <a href="tel:+264818536789" className="text-sm text-gray-400 hover:text-[var(--swift-teal)] transition-colors block">
+                        NAM: +264 81 853 6789
                       </a>
                     </>
                   ),

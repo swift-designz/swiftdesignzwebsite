@@ -59,6 +59,7 @@ const projects: Project[] = [
     description:
       "A clean, professional website for a Cape Town IT support business offering web hosting, domain registration, remote support, and network solutions.",
     image: "/potfolio/it-guru-portfolio-thumbnail.png",
+    link: "https://it-guru.co.za",
     tags: ["Custom Design", "IT Services", "Responsive"],
   },
   {

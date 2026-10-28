@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Cookies from "js-cookie";
 import Link from "next/link";
 import { Shield, X } from "lucide-react";
+import { onSplashDone } from "@/app/components/ui/SplashScreen";
 
 export default function CookieConsent() {
   const [show, setShow] = useState(false);
@@ -13,18 +14,14 @@ export default function CookieConsent() {
     const consent = Cookies.get("swift-cookie-consent");
     if (consent) return;
 
-    // Show 5 seconds after the splash screen finishes (or immediately fires if no splash).
+    // Show 5 seconds after the splash screen finishes (straight after load if there was no splash).
     let timer: ReturnType<typeof setTimeout>;
-
-    const onSplashDone = () => {
-      window.removeEventListener("swift-splash-done", onSplashDone);
+    const stop = onSplashDone(() => {
       timer = setTimeout(() => setShow(true), 5000);
-    };
-
-    window.addEventListener("swift-splash-done", onSplashDone);
+    });
 
     return () => {
-      window.removeEventListener("swift-splash-done", onSplashDone);
+      stop();
       clearTimeout(timer);
     };
   }, []);

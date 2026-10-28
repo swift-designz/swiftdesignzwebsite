@@ -288,7 +288,9 @@
     "cookies": "Cookie Policy",
     "location": "South Africa, Namibia",
     "rights": "All rights reserved.",
-    "crafted": "Designed & developed with precision"
+    "crafted": "Designed & developed with precision",
+    "productLabel": "Our product",
+    "productDesc": "Trusted local services in Namibia"
   },
   "splash": {
     "welcome": "Welcome to",
@@ -391,5 +393,15 @@
     "ctaHighlight": "Next Success Story",
     "ctaDesc": "Let's create something worth talking about. Reach out and start your project today.",
     "ctaBtn": "Start Your Project"
+  },
+  "announce": {
+    "eyebrow": "Announcement",
+    "title": "HireMeBuddy is",
+    "titleHighlight": "coming to Namibia",
+    "body": "Our own app connects you with ID-checked local providers for 129 services, from plumbers and braiders to bookkeepers and DStv installers. We're piloting in Windhoek now. Join the waitlist to be first in.",
+    "cta": "Join the waitlist",
+    "later": "Maybe later",
+    "close": "Close announcement",
+    "mascotAlt": "Buddy, the HireMeBuddy mascot, waving"
   }
 }

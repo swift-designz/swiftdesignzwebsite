@@ -118,6 +118,22 @@ export default function Footer() {
                   <Instagram size={16} />
                 </a>
               </div>
+              <a
+                href="https://hiremebuddy.swiftdesignz.co.za"
+                target="_blank"
+                rel="noopener"
+                className="mt-3 inline-flex items-center gap-3 self-start rounded-xl px-3 py-2 transition-colors hover:bg-white/5"
+                style={{ border: "1px solid rgba(48,176,176,0.18)" }}
+              >
+                <Image src="/images/hiremebuddy/logo.png" alt="" width={28} height={28} className="rounded-lg" />
+                <span className="flex flex-col leading-tight">
+                  <span className="text-[10px] uppercase tracking-[2px] text-[#d97706]">{t("footer.productLabel")}</span>
+                  <span className="text-sm text-white">
+                    HireMeBuddy™ <span className="text-gray-400">· {t("footer.productDesc")}</span>
+                  </span>
+                </span>
+                <ArrowUpRight size={14} className="text-gray-500" />
+              </a>
             </div>
           </div>
 

@@ -288,7 +288,9 @@
     "cookies": "Koekiebeleid",
     "location": "Suid-Afrika, Namibia",
     "rights": "Alle regte voorbehou.",
-    "crafted": "Ontwerp en ontwikkel met noukeurigheid"
+    "crafted": "Ontwerp en ontwikkel met noukeurigheid",
+    "productLabel": "Ons produk",
+    "productDesc": "Betroubare plaaslike dienste in Namibië"
   },
   "splash": {
     "welcome": "Welkom by",
@@ -391,5 +393,15 @@
     "ctaHighlight": "Volgende Suksesverhaal te Wees",
     "ctaDesc": "Kom ons skep iets die moeite werd om oor te praat. Kontak ons en begin jou projek vandag.",
     "ctaBtn": "Begin Jou Projek"
+  },
+  "announce": {
+    "eyebrow": "Aankondiging",
+    "title": "HireMeBuddy kom",
+    "titleHighlight": "na Namibië",
+    "body": "Ons eie toepassing verbind jou met ID-gekontroleerde plaaslike diensverskaffers vir 129 dienste, van loodgieters en vlegters tot boekhouers en DStv-installeerders. Ons loods tans in Windhoek. Sluit by die waglys aan om eerste te wees.",
+    "cta": "Sluit by die waglys aan",
+    "later": "Miskien later",
+    "close": "Sluit aankondiging",
+    "mascotAlt": "Buddy, die HireMeBuddy-gelukbringer, wat waai"
   }
 }

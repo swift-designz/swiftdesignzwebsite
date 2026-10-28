@@ -107,12 +107,13 @@ const projects: Project[] = [
     tags: ["Mobile App", "Native", "Cloud"],
   },
   {
-    title: "HireMeBuddy - Job Search App",
+    title: "HireMeBuddy™ - Local Services App",
     category: "apps",
     description:
-      "A job search application designed to connect job seekers with potential employers, featuring advanced search filters, resume management, and real-time notifications.",
+      "Our own product: a Namibian app that connects people with ID-checked local providers for 129 services, from plumbers and braiders to bookkeepers and DStv installers. Client, provider and admin apps with bookings, chat and safety sharing. Launching in Windhoek.",
     image: "/potfolio/hiremebuddy-portfolio-thumbnail.png",
-    tags: ["Job Search", "Mobile App", "SaaS"],
+    tags: ["Our Product", "Mobile App", "Marketplace"],
+    link: "https://hiremebuddy.swiftdesignz.co.za",
   },
 ];
 

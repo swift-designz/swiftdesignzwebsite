@@ -93,8 +93,21 @@ const STARS = Array.from({ length: 40 }, () => ({
 /** Fires when splash is done (or skipped) so CookieConsent can start its 5s countdown. */
 function fireSplashDone() {
   if (typeof window !== "undefined") {
+    // The flag lets components that attach their listener after this point still know.
+    (window as Window & { __swiftSplashDone?: boolean }).__swiftSplashDone = true;
     window.dispatchEvent(new Event("swift-splash-done"));
   }
+}
+
+/** Runs `cb` once the splash screen has finished (straight away if it already has). */
+export function onSplashDone(cb: () => void): () => void {
+  if ((window as Window & { __swiftSplashDone?: boolean }).__swiftSplashDone) {
+    cb();
+    return () => {};
+  }
+  const handler = () => cb();
+  window.addEventListener("swift-splash-done", handler, { once: true });
+  return () => window.removeEventListener("swift-splash-done", handler);
 }
 
 export default function SplashScreen() {
